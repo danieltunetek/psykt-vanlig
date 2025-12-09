@@ -131,10 +131,17 @@
     width: 100%;
   }
 
+  .illustrationBlock {
+    width: 100%;
+    max-width: 100%;
+    order: 2;
+  }
+
   .textBlock {
     gap: var(--ds-size-5); /* 20px gap */
     align-items: flex-start;
     text-align: left;
+    order: 1;
   }
 
   .title {
@@ -156,6 +163,7 @@
     font-size: 18px; /* Smaller text on mobile - font-size/4 */
     letter-spacing: 0.09px;
     text-align: left; /* Left-align text on mobile */
+    width: 100%;
     max-width: 100%;
   }
 
@@ -166,11 +174,6 @@
 
   .description li {
     margin-left: 27px; /* ms-[27px] from Figma */
-  }
-
-  .illustrationBlock {
-    width: 100%;
-    max-width: 100%;
   }
 
   .illustrationImage {

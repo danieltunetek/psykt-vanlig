@@ -116,6 +116,7 @@
     font-size: 18px; /* Smaller text on mobile - font-size/4 */
     letter-spacing: 0.09px;
     text-align: left; /* Left-align text on mobile */
+    width: 100%;
     max-width: 100%;
   }
 
