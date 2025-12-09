@@ -1,0 +1,119 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--ds-size-26) var(--ds-size-30);
+  background-color: var(--ds-color-warning-background-default);
+  position: relative;
+  gap: var(--ds-size-9); /* 36px */
+  text-align: center;
+  color: var(--ds-color-neutral-text-default);
+}
+
+.content {
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ds-size-9); /* 36px */
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  font-family: var(--ds-font-family);
+  font-weight: 700; /* Bold */
+  font-size: 60px; /* font-size/10 */
+  line-height: 1.3;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.subtitle {
+  font-family: var(--ds-font-family);
+  font-weight: 400; /* Regular */
+  font-size: 36px; /* font-size/8 */
+  line-height: 1.3;
+  margin: 0;
+  letter-spacing: -0.18px;
+  max-width: 478px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-4); /* 16px */
+  align-items: center;
+  width: 100%;
+}
+
+.arrowBottom {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 68px;
+}
+
+.arrowImage {
+  width: 46px;
+  height: 46px;
+  display: block;
+  transform: rotate(180deg);
+}
+
+/* Mobile styles */
+@media (max-width: 850px) {
+  .section {
+    padding: var(--ds-size-26) var(--ds-size-4); /* 104px vertical, 16px horizontal */
+    align-items: flex-start; /* Left-align on mobile */
+  }
+
+  .content {
+    align-items: flex-start; /* Left-align content on mobile */
+    gap: var(--ds-size-5); /* 20px gap */
+    width: 100%;
+  }
+
+  .header {
+    gap: 8px;
+  }
+
+  .title {
+    font-size: 36px; /* Smaller title on mobile */
+    letter-spacing: -0.36px;
+    text-align: left; /* Left-align title on mobile */
+    white-space: normal;
+  }
+
+  .subtitle {
+    font-size: 18px; /* Smaller text on mobile - font-size/4 */
+    letter-spacing: 0.09px;
+    text-align: left; /* Left-align text on mobile */
+    max-width: 100%;
+  }
+
+  .links {
+    gap: var(--ds-size-4); /* 16px */
+  }
+
+  .arrowBottom {
+    width: 100%;
+    justify-content: center;
+    height: auto;
+  }
+
+  .arrowImage {
+    width: 40px; /* Smaller arrow on mobile */
+    height: 40px;
+  }
+}
+

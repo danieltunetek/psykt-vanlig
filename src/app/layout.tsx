@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 import "./globals.css";
+import "@digdir/designsystemet-css/index.css";
+import "rk-design-tokens/design-tokens-build/theme.css";
+import "./theme-override.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sourceSans3 = Source_Sans_3({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-source-sans-3",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,10 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+    <html lang="no" className={sourceSans3.variable}>
+      <body>{children}</body>
     </html>
   );
 }

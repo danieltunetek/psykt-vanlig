@@ -1,0 +1,9 @@
+:root {
+  --ds-font-family: 'Source Sans 3', sans-serif;
+}
+
+body {
+  font-family: var(--ds-font-family);
+}
+
+

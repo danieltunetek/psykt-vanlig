@@ -1,0 +1,33 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--ds-color-success-surface-tinted);
+  padding: var(--ds-size-8) var(--ds-size-30); /* Padding from design: py-32px px-120px */
+  overflow: hidden;
+}
+
+.content {
+  max-width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustration {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 850px) {
+  .section {
+    padding: var(--ds-size-15) var(--ds-size-4); /* 60px vertical, 16px horizontal */
+  }
+
+  .illustration {
+    max-width: 850px; /* Scale down the original image on mobile */
+  }
+}

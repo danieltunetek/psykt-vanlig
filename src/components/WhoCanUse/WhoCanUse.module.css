@@ -1,0 +1,90 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--ds-size-26) var(--ds-size-30);
+  background-color: var(--ds-color-warning-background-tinted);
+  gap: var(--ds-size-5);
+  text-align: center;
+  color: var(--ds-color-neutral-text-default);
+}
+
+.content {
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ds-size-5);
+  width: 100%;
+}
+
+.title {
+  font-family: var(--ds-font-family);
+  font-weight: 700; /* Bold */
+  font-size: 60px; /* font-size/10 */
+  line-height: 1.3;
+  margin: 0;
+}
+
+.textBlock {
+  font-family: var(--ds-font-family);
+  font-weight: 400; /* Regular */
+  font-size: 21px; /* font-size/5 */
+  line-height: 1.5;
+  margin: 0;
+  width: 100%;
+  max-width: 800px;
+}
+
+.textBlock ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: disc;
+  text-align: left;
+}
+
+.textBlock li {
+  margin-left: 31.5px;
+  margin-bottom: 0;
+}
+
+.textBlock li:last-child {
+  margin-bottom: 0;
+}
+
+.textBlock p {
+  margin-bottom: 0;
+}
+
+/* Mobile styles */
+@media (max-width: 850px) {
+  .section {
+    padding: var(--ds-size-26) var(--ds-size-4); /* 104px vertical, 16px horizontal */
+    align-items: flex-start; /* Left-align on mobile */
+  }
+
+  .content {
+    align-items: flex-start; /* Left-align content on mobile */
+    gap: var(--ds-size-5); /* 20px gap */
+    width: 100%;
+  }
+
+  .title {
+    font-size: 36px; /* Smaller title on mobile */
+    letter-spacing: -0.36px;
+    text-align: left; /* Left-align title on mobile */
+  }
+
+  .textBlock {
+    font-size: 18px; /* Smaller text on mobile - font-size/4 */
+    letter-spacing: 0.09px;
+    text-align: left; /* Left-align text on mobile */
+    max-width: 100%;
+  }
+
+  .textBlock li {
+    margin-left: 27px; /* ms-[27px] from Figma */
+  }
+}
+
