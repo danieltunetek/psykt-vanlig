@@ -6,17 +6,6 @@ export const Level2 = () => {
   return (
     <section className={styles.section}>
       <div className={styles.content}>
-        <div className={styles.illustrationBlock}>
-          <Image 
-            src="/illustrationblock3.png" 
-            alt="" 
-            className={styles.illustrationImage}
-            aria-hidden="true"
-            width={600}
-            height={400}
-          />
-        </div>
-        
         <div className={styles.textBlock}>
           <h2 className={styles.title}>
             <span className={styles.desktopTitle}>Nivå 2: leve med andre</span>
@@ -32,6 +21,17 @@ export const Level2 = () => {
               <li>Å bli tryggerepå deg selv og kroppen din.</li>
             </ul>
           </div>
+        </div>
+        
+        <div className={styles.illustrationBlock}>
+          <Image 
+            src="/illustrationblock3.png" 
+            alt="" 
+            className={styles.illustrationImage}
+            aria-hidden="true"
+            width={600}
+            height={400}
+          />
         </div>
       </div>
     </section>
