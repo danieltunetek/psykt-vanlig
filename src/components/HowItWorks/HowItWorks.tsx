@@ -1,8 +1,13 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import styles from './HowItWorks.module.css';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export const HowItWorks = () => {
+  const { ref, isVisible } = useScrollAnimation<HTMLHeadingElement>();
+
   return (
     <section className={styles.section}>
       <div className={styles.arrowTop}>
@@ -17,7 +22,10 @@ export const HowItWorks = () => {
       </div>
       
       <div className={styles.content}>
-        <h2 className={styles.title}>
+        <h2 
+          ref={ref}
+          className={`${styles.title} ${isVisible ? styles.animate : ''}`}
+        >
           <span className={styles.desktopTitle}>🛠 Hvordan fungerer <br></br> kurset?</span>
           <span className={styles.mobileTitle}>🛠 Hvordan fungerer kurset?</span>
         </h2>

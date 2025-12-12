@@ -1,11 +1,21 @@
+'use client';
+
 import React from 'react';
 import styles from './WhoCanUse.module.css';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export const WhoCanUse = () => {
+  const { ref, isVisible } = useScrollAnimation<HTMLHeadingElement>();
+
   return (
     <section className={styles.section}>
       <div className={styles.content}>
-        <h2 className={styles.title}>👥 Hvem kan bruke det?</h2>
+        <h2 
+          ref={ref}
+          className={`${styles.title} ${isVisible ? styles.animate : ''}`}
+        >
+          👥 Hvem kan bruke det?
+        </h2>
         <div className={styles.textBlock}>
           <ul>
             <li>Frivillige i Røde Kors</li>

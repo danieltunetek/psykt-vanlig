@@ -1,12 +1,21 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import styles from './Level1.module.css';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export const Level1 = () => {
+  const { ref: textRef, isVisible: textVisible } = useScrollAnimation<HTMLDivElement>();
+  const { ref: illustrationRef, isVisible: illustrationVisible } = useScrollAnimation<HTMLDivElement>();
+
   return (
     <section className={styles.section}>
       <div className={styles.content}>
-        <div className={styles.textBlock}>
+        <div 
+          ref={textRef}
+          className={`${styles.textBlock} ${textVisible ? styles.animate : ''}`}
+        >
           <h2 className={styles.title}>
             <span className={styles.desktopTitle}>Nivå 1: leve med seg selv</span>
             <span className={styles.mobileTitle}>
@@ -24,7 +33,10 @@ export const Level1 = () => {
           </div>
         </div>
         
-        <div className={styles.illustrationBlock}>
+        <div 
+          ref={illustrationRef}
+          className={`${styles.illustrationBlock} ${illustrationVisible ? styles.animate : ''}`}
+        >
           <Image 
             src="/illustrationblock2.png" 
             alt="" 

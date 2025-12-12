@@ -4,9 +4,11 @@ import React, { useState } from 'react';
 import { Textfield, Button } from 'rk-designsystem';
 import styles from './UseIt.module.css';
 import Image from 'next/image';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export const UseIt = () => {
   const [email, setEmail] = useState('');
+  const { ref, isVisible } = useScrollAnimation<HTMLHeadingElement>();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,7 +30,12 @@ export const UseIt = () => {
       </div>
 
       <div className={styles.content}>
-        <h2 className={styles.title}>✉️ Vil du ta det i bruk?</h2>
+        <h2 
+          ref={ref}
+          className={`${styles.title} ${isVisible ? styles.animate : ''}`}
+        >
+          ✉️ Vil du ta det i bruk?
+        </h2>
         <p className={styles.text}>
           Ta kontakt med Røde Kors for opplæring og tilgang til materiell.
           <br />

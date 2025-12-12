@@ -1,11 +1,21 @@
+'use client';
+
 import React from 'react';
 import styles from './WhatYouGet.module.css';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export const WhatYouGet = () => {
+  const { ref, isVisible } = useScrollAnimation<HTMLHeadingElement>();
+
   return (
     <section className={styles.section}>
       <div className={styles.content}>
-        <h2 className={styles.title}>🌈 Hva kan du få ut av det?</h2>
+        <h2 
+          ref={ref}
+          className={`${styles.title} ${isVisible ? styles.animate : ''}`}
+        >
+          🌈 Hva kan du få ut av det?
+        </h2>
         <div className={styles.textBlock}>
           <p>Etter å ha deltatt i PsyktVanlig-workshopen, vil du:</p>
           <div className={styles.bulletList}>
